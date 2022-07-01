@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap'); */
 @font-face {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans';
   src: url('./utils/JosefinSans-VariableFont_wght.ttf');
   src: url('./utils/static/JosefinSans-Thin.ttf');
   src: url('./utils/static/JosefinSans-ExtraLight.ttf');
@@ -16,7 +16,7 @@
 
   /* COLOR PALLETE */
   --primary-background: #F0F4FB;
-  --secondary-background: ##F6F9FD;
+  --secondary-background: #F6F9FD;
 
   --primary-text: #152632;
   --secondary-text: #1ECEB9;

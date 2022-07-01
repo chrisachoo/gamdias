@@ -1,8 +1,16 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const Button = styled.button `
+  padding: .5em 2em;
+  font-size: 1em;
+  background: #152632;
+  color: #F6F9FD;
+`
 
 const PrimaryButton = ({ onClick, label }) => {
   return (
-    <button className='button' onClick={onClick}>{label}</button>
+    <Button className='button' onClick={onClick}>{label}</Button>
   )
 }
 
