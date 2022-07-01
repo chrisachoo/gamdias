@@ -1,8 +1,36 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const Card = () => {
+const CardComponent = styled.div`
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+`
+const Image = styled.img `
+  width: 100%;
+  height: 100%;
+`
+const Inside = styled.div`
+  position: absolute;
+  background:linear-gradient(0deg, rgba(27, 30, 35, 1) 0%, rgba(27, 30, 35, 0) 100%);
+  width: 100%;
+  height: 100%;
+`
+const Text = styled.p `
+  color: #FFF;
+  position: absolute;
+  padding: 1em;
+  bottom: 0;
+`
+const Card = ({ url, gameName }) => {
   return (
-    <div>Card</div>
+    <CardComponent>
+      <Image src={url} alt="game-pic" />
+      <Inside>
+        <Text>{gameName}</Text>
+      </Inside>
+    </CardComponent>
   )
 }
 
