@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
+import { Card } from '../index'
 
 const Index = () => {
 
@@ -8,20 +9,32 @@ const Index = () => {
 
     useEffect(() => {
         axios.get(`${_url}games`)
-        .then(res => setData(res.data))
-    },[])
+            .then(res => {
+                console.log(res)
+                setData(res.data)
+            })
+            .catch(err => {
+                console.log(err)
+            })
+    }, [])
 
     const renderData = () => {
         return data.map(data => {
             return (
-                <span><img src={data.avatar} alt="jjj" style={{width: '100%'}}/></span>
+                <span><img src={data.avatar} alt="jjj" style={{ width: '100%' }} /></span>
             )
         })
     }
 
-  return (
-    <div>{renderData()}</div>
-  )
+    return (
+        <div>
+            <ul>
+                {data.map(x => (
+                    <Card key={x.id} url={x.avatar} gameName={x.name} />
+                ))}
+            </ul>
+        </div>
+    )
 }
 
 export default Index
