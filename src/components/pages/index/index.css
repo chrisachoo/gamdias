@@ -1,0 +1,27 @@
+.section__content,
+.section__cards {
+    display: grid;
+    gap: 2em;
+}
+
+.section__cards-list {
+    padding: 1em 0;
+}
+
+@media only screen and (min-width: 992px) {
+    .section__content {
+        grid-template-columns: 50% auto;
+        margin-bottom: 2em;
+    }
+
+    .section__content-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .section__cards {
+        grid-template-columns: 30% 30% 30%;
+        justify-content: space-between;
+    }
+}
