@@ -6,6 +6,8 @@ const Button = styled.button `
   font-size: 1em;
   background: #152632;
   color: #F6F9FD;
+  border: none;
+  border-radius: 5px;
 `
 
 const PrimaryButton = ({ onClick, label }) => {

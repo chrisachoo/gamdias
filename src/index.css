@@ -1,6 +1,6 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap'); */
-@font-face {
-  font-family: 'Josefin Sans';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
+/* @font-face {
+  font-family: 'Josefin Sans', sans-serif;
   src: url('./utils/JosefinSans-VariableFont_wght.ttf');
   src: url('./utils/static/JosefinSans-Thin.ttf');
   src: url('./utils/static/JosefinSans-ExtraLight.ttf');
@@ -9,8 +9,7 @@
   src: url('./utils/static/JosefinSans-Medium.ttf');
   src: url('./utils/static/JosefinSans-SemiBold.ttf');
   src: url('./utils/static/JosefinSans-Bold.ttf');
-
-}
+} */
 :root {
   font-family: 'Josefin Sans', sans-serif;
 
