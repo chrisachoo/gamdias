@@ -230,5 +230,61 @@
         "avatar": "https://wallpaperaccess.com/full/275059.jpg",
         "description": "Welcome to San Francisco. Play as Marcus, a brilliant young hacker, and join the most notorious hacker group, DedSec. Your objective: execute the biggest hack of history.",
         "id": "16"
+    },
+    {
+        "name": "Grand Theft Auto V",
+        "releaseDate": "November 18, 2014",
+        "genre": [
+            "Adventure",
+            "Action"
+        ],
+        "rating": "PEGI 18",
+        "publisher": "Rockstar Games",
+        "developer": "Rockstar North",
+        "avatar": "https://wallpaperaccess.com/full/1564264.jpg",
+        "description": "When a young street hustler, a retired bank robber and a terrifying psychopath find themselves entangled with some of the most frightening and deranged elements of the criminal underworld, the U.S. government and the entertainment industry, they must pull off a series of dangerous heists to survive in a ruthless city in which they can trust nobody, least of all each other.",
+        "id": "17"
+    },
+    {
+        "name": "Tom Clancy’s Rainbow Six® Siege",
+        "releaseDate": "December 1, 2015",
+        "genre": [
+            "Shooter",
+            "Action"
+        ],
+        "rating": "PEGI 16",
+        "publisher": "Ubisoft",
+        "developer": "Ubisoft Montreal",
+        "avatar": "https://wallpaperaccess.com/full/1264433.png",
+        "description": "Tom Clancy's Rainbow Six Siege is the latest installment of the acclaimed first-person shooter franchise developed by the renowned Ubisoft Montreal studio.",
+        "id": "18"
+    },
+    {
+        "name": "Shadow of the Tomb Raider",
+        "releaseDate": "January 1, 2014",
+        "genre": [
+            "Adventure",
+            "Action"
+        ],
+        "rating": "PEGI 18",
+        "publisher": "Square Enix Ltd",
+        "developer": "Eidos Montreal",
+        "avatar": "https://wallpaperaccess.com/full/1312209.png",
+        "description": "The cinematic action-adventure that forced Lara Croft to grow from an inexperienced young woman into a hardened survivor has been re-built for next-gen consoles, featuring an obsessively detailed Lara and a stunningly lifelike world.",
+        "id": "19"
+    },
+    {
+        "name": "Fortnite",
+        "releaseDate": "July 21, 2017",
+        "genre": [
+            "Adventure",
+            "Action"
+        ],
+        "rating": "PEGI 12",
+        "publisher": "Epic Game Inc",
+        "developer": "Epic Game Inc",
+        "avatar": "https://wallpaperaccess.com/full/379136.jpg",
+        "description": "In Fortnite Chapter 3 Season 3: Vibin’, the Island is one giant party. Bounce around in Reality Falls, ride atop creatures, brave the Screwballer coaster, and revel with new arsenal. Drop into Season 3 and spread the good vibes!",
+        "id": "20"
     }
 ]

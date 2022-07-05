@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Heading, Card, Carousel } from '../../index'
+import { Heading, Card, Carousel, Paragraph } from '../../index'
+import { HiChevronDown } from 'react-icons/hi'
+import { Link } from 'react-router-dom'
 import './index.css'
 
 const Index = () => {
@@ -32,12 +34,14 @@ const Index = () => {
       <div className='section__content'>
         <div className='section__content-text'>
           <Heading title={`Time to `} text={`play`} />
-          <p>It’s time to discover new games, and we
-            here to help you with the choice</p>
+          <Paragraph paragraph={`It’s time to discover new games, and we here to help you with the choice`} />
         </div>
         <div className='section__content-carousel'>
           <Carousel />
         </div>
+      </div>
+      <div className='section__title'>
+        <p>popular games</p>
       </div>
       <div className='section__cards'>
         {data.slice(2, 5).map(x => (
@@ -45,6 +49,12 @@ const Index = () => {
             <Card className='section__cards-list' key={x.id} url={x.avatar} gameName={x.name} />
           </ul>
         ))}
+      </div>
+      <div className='section__games'>
+        <Link to='./games'>
+          <p>click here for more</p>
+          <span><HiChevronDown /></span>
+        </Link>
       </div>
     </section>
   )

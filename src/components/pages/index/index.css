@@ -4,14 +4,37 @@
     gap: 2em;
 }
 
-.section__cards-list {
-    padding: 1em 0;
+.section__content {
+    margin-bottom: 4em;
+}
+
+.section__title p {
+    margin-bottom: 1.5em;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: var(--primary-text);
+}
+
+.section__games {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.section__games p {
+    font-size: 18px;
+    color: var(--tertiary-text);
+}
+
+.section__games span {
+    font-size: 20px;
+    color: var(--secondary-text);
 }
 
 @media only screen and (min-width: 992px) {
     .section__content {
         grid-template-columns: 50% auto;
-        margin-bottom: 2em;
+        margin-bottom: 4em;
     }
 
     .section__content-text {
