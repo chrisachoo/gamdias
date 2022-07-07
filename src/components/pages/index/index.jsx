@@ -3,7 +3,6 @@ import axios from 'axios'
 import { Heading, Card, Carousel, Paragraph } from '../../index'
 import { HiChevronDown } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
-import './index.css'
 
 const Index = () => {
 
@@ -49,7 +48,7 @@ const Index = () => {
         ))}
       </div>
       <div className='section__games'>
-        <Link to='./games'>
+        <Link to='./game'>
           <p>click here for more</p>
           <span><HiChevronDown /></span>
         </Link>
