@@ -21,13 +21,13 @@ const Index = () => {
       })
   }, [])
 
-  const renderData = () => {
-    return data.map(data => {
-      return (
-        <span><img src={data.avatar} alt="jjj" style={{ width: '100%' }} /></span>
-      )
-    })
-  }
+  // const renderData = () => {
+  //   return data.map(data => {
+  //     return (
+  //       <span><img src={data.avatar} alt="jjj" style={{ width: '100%' }} /></span>
+  //     )
+  //   })
+  // }
 
   return (
     <section className='section__padding'>
@@ -44,10 +44,8 @@ const Index = () => {
         <p>popular games</p>
       </div>
       <div className='section__cards'>
-        {data.slice(2, 5).map(x => (
-          <ul className='section__cards-list'>
-            <Card className='section__cards-list' key={x.id} url={x.avatar} gameName={x.name} />
-          </ul>
+        {data.slice(5, 8).map(x => (
+          <Card className='section__cards-list' key={x.id} url={x.avatar} gameName={x.name} />
         ))}
       </div>
       <div className='section__games'>

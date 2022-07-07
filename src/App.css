@@ -16,6 +16,11 @@ section {
     justify-content: center;
 }
 
+.fixed-top-nav {
+    position: sticky;
+    top: 0;
+}
+
 .section__padding {
     padding: 1em;
 }

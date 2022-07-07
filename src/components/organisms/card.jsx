@@ -14,15 +14,16 @@ const Image = styled.img `
 `
 const Inside = styled.div`
   position: absolute;
-  background:linear-gradient(0deg, rgba(27, 30, 35, 1) 0%, rgba(27, 30, 35, 0) 100%);
+  background:linear-gradient(0deg, rgba(27, 30, 35, .5) 0%, rgba(27, 30, 35, 0) 100%);
   width: 100%;
   height: 100%;
 `
 const Text = styled.p `
   color: #FFF;
   position: absolute;
-  padding: 1em;
+  padding: .5em;
   bottom: 0;
+  font-size: 14px;
 `
 const Card = ({ url, gameName }) => {
   return (

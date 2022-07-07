@@ -96,7 +96,7 @@
         "rating": "10-12 PG LV",
         "publisher": "Ubisoft",
         "developer": "Ivory Tower",
-        "avatar": "https://wallpaperaccess.com/full/1916908.jpg",
+        "avatar": "https://wallpaperaccess.com/full/2286463.png",
         "description": "The newest iteration in the revolutionary franchise, The Crew® 2 captures the thrill of the American motorsports spirit in one of the most exhilarating open worlds ever created. Welcome to Motornation, a huge, varied, action-packed and beautiful playground built for motorsports throughout the entire US of A. Enjoy unrestrained exploration on ground, sea and sky. From coast to coast, street and pro racers, off-road explorers and freestylers gather and compete in all kinds of disciplines. Join them in high-octane contests and share every glorious moment with the world.",
         "id": "7"
     },
@@ -113,7 +113,7 @@
         "rating": "13LV",
         "publisher": "Electronic Arts",
         "developer": "Ghost Games",
-        "avatar": "https://wallpaperaccess.com/full/1912979.jpg",
+        "avatar": "https://wallpaperaccess.com/full/391608.jpg",
         "description": "Need for Speed™, one of the world’s bestselling video game franchises returns with a vengeance in the new Need for Speed Payback.",
         "id": "8"
     },
@@ -126,7 +126,7 @@
         "rating": "13",
         "publisher": "Electronic Arts",
         "developer": "Maxis",
-        "avatar": "https://wallpaperaccess.com/full/1615947.png",
+        "avatar": "https://wallpaperaccess.com/full/2093343.jpg",
         "description": "Unleash your imagination and create a world of Sims that’s wholly unique. Explore and customize every detail from Sims to homes–and much more. Choose how Sims look, act, and dress. Tell your stories your way while developing relationships, pursuing careers and life aspirations, and immersing yourself in an extraordinary game where the possibilities are endless.",
         "id": "9"
     },
@@ -198,7 +198,7 @@
         "rating": "16LV",
         "publisher": "Uderdog Studio",
         "developer": "CI Games",
-        "avatar": "https://images6.alphacoders.com/115/thumb-1920-1150312.png",
+        "avatar": "https://wallpaperaccess.com/full/3309652.jpg",
         "description": "SGW Contracts 2 is a modern warfare shooter set in the Middle East. Play as Raven, Contract Sniper Assassin, as you take out a series of targets across a dramatic single-player campaign. With extreme-range shots exceeding 1000m, gear up for the most challenging entry to the series yet.",
         "id": "14"
     },
@@ -269,7 +269,7 @@
         "rating": "PEGI 18",
         "publisher": "Square Enix Ltd",
         "developer": "Eidos Montreal",
-        "avatar": "https://wallpaperaccess.com/full/1312209.png",
+        "avatar": "https://wallpaperaccess.com/full/1312248.jpg",
         "description": "The cinematic action-adventure that forced Lara Croft to grow from an inexperienced young woman into a hardened survivor has been re-built for next-gen consoles, featuring an obsessively detailed Lara and a stunningly lifelike world.",
         "id": "19"
     },
@@ -286,5 +286,19 @@
         "avatar": "https://wallpaperaccess.com/full/379136.jpg",
         "description": "In Fortnite Chapter 3 Season 3: Vibin’, the Island is one giant party. Bounce around in Reality Falls, ride atop creatures, brave the Screwballer coaster, and revel with new arsenal. Drop into Season 3 and spread the good vibes!",
         "id": "20"
+    },
+    {
+        "name": "Uncharted 4: A Thief's End",
+        "releaseDate": "May 10, 2016",
+        "genre": [
+            "Adventure",
+            "Action"
+        ],
+        "rating": "PEGI 12",
+        "publisher": "Sony Computer Entertainment",
+        "developer": "Naughty Dog Software",
+        "avatar": "https://wallpaperaccess.com/full/331887.jpg",
+        "description": "The latest title in the Uncharted series is the first in this third-person adventure series on the Playstation 4 game system.",
+        "id": "21"
     }
 ]

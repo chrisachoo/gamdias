@@ -14,7 +14,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className='navbar navbar__padding'>
+    <div className='navbar navbar__padding fixed-top-nav'>
       <div className='navbar__menu'>
         {toggle
           ? <RiCloseFill color='#152632' size={20} onClick={() => setToggle(false)} />
