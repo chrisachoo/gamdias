@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import './App.css'
-import { Home } from './components/pages'
+import { Home, UndefinedPage } from './components/pages'
 import { Navbar } from './components'
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='*' element={<UndefinedPage />} />
       </Routes>
     </div>
   )
