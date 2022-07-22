@@ -1,0 +1,85 @@
+img {
+    width: 100%;
+}
+
+.error-footer {
+    display: none;
+}
+
+.error-header {
+    margin: 1em 0;
+}
+
+.error-header p {
+    color: var(--primary-text);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.error-header span {
+    color: var(--tertiary-text);
+    font-size: 14px;
+    margin-left: .2em;
+}
+
+.error__content h2 {
+    color: var(--primary-text);
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.error__content span {
+    color: var(--secondary-text);
+}
+
+.error__content p {
+    color: var(--primary-text);
+    font-weight: 400;
+    text-align: justify;
+    margin: 1em 0;
+}
+
+@media only screen and (min-width: 992px) {
+
+    .error {
+        display: grid;
+        grid-template-columns: 50% auto;
+        gap: 2em;
+    }
+
+    .error-header {
+        display: none;
+    }
+
+    .error__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    br {
+        display: block; /* makes it have a width */
+        content: ""; /* clears default height */
+        margin-top: .2em; /* change this to whatever height you want it */
+    }
+
+    .error-footer {
+        display: unset;
+        margin-top: 2em;
+    }
+
+    .error-footer p {
+        color: var(--primary-text);
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 2px;
+    }
+
+    .error-footer span {
+        margin-left: .4em;
+        font-size: 18px;
+        color: var(--tertiary-text);
+    }
+}
