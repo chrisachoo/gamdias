@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { InputForm, PrimaryButton, RemeberMe, SubText } from "../../index";
+import { InputForm, FullWidthButton, RemeberMe, SubText } from "../../index";
 import "./auth.css";
 
 const Signin = ({ data }) => {
@@ -56,7 +56,7 @@ const Signin = ({ data }) => {
             />
 
             <RemeberMe />
-            <PrimaryButton
+            <FullWidthButton
               type="submit"
               label={`Sign in`}
               onClick={showDataForm}

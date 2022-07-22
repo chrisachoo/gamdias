@@ -9,12 +9,13 @@ const Button = styled.button `
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 100%;
 `
 
-const PrimaryButton = ({ onClick, label }) => {
+const FullWidthButton = ({ onClick, label }) => {
   return (
     <Button className='button' onClick={onClick}>{label}</Button>
   )
 }
 
-export default PrimaryButton
+export default FullWidthButton
