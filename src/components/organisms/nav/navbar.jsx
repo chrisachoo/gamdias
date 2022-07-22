@@ -44,7 +44,7 @@ const Navbar = () => {
         <PrimaryButton label={`Signin`} onClick={() => toSignin()} />
       </div>
       <div className='navbar__profile'>
-          <RiUser3Fill color='#152632' size={20}/>
+          <RiUser3Fill color='#152632' size={20} onClick={() => toSignin()}/>
       </div>
     </div>
   )
