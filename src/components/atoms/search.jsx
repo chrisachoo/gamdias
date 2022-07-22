@@ -16,6 +16,8 @@ const Input = styled.input `
     padding: .5em 1em;
     color: #152632;
     border-radius: 6px 0 0 6px;
+    text-transform: capitalize;
+    width: 100%;
 `
 
 const Button = styled.button `

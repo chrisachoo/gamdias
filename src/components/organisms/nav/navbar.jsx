@@ -9,8 +9,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false)
 
   let navigate = useNavigate()
-  const toLogin = () => {
-    navigate('login')
+  const toSignin = () => {
+    navigate('signin')
   }
 
   return (
@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className='navbar__button'>
-        <PrimaryButton label={`Login`} onClick={() => { toLogin() }} />
+        <PrimaryButton label={`Signin`} onClick={() => toSignin()} />
       </div>
       <div className='navbar__profile'>
           <RiUser3Fill color='#152632' size={20}/>

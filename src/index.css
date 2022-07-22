@@ -20,4 +20,6 @@
   --primary-text: #152632;
   --secondary-text: #1ECEB9;
   --tertiary-text: rgba(21, 38, 50, 0.5);
+
+  background: var(--secondary-background);
 }

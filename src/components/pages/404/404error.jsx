@@ -4,7 +4,7 @@ import { PrimaryButton } from '../../index'
 import pixar from '../../../images/pixar.png'
 import './404.css'
 
-const UndefinedPage = () => {
+const PageNotFound = () => {
 
     let navigate = useNavigate()
     const backToHome = () => {
@@ -38,4 +38,4 @@ const UndefinedPage = () => {
     )
 }
 
-export default UndefinedPage
+export default PageNotFound

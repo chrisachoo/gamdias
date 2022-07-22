@@ -8,6 +8,8 @@ const Button = styled.button `
   color: #F6F9FD;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
 `
 
 const PrimaryButton = ({ onClick, label }) => {

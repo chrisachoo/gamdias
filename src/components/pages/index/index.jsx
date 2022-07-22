@@ -1,32 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import React from 'react'
 import { Heading, Card, Carousel, Paragraph } from '../../index'
 import { HiChevronDown } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
 
-const Index = () => {
-
-  const [data, setData] = useState([])
-  const _url = 'https://62c2c416876c4700f52db5b6.mockapi.io/api/v1/'
-
-  useEffect(() => {
-    axios.get(`${_url}games`)
-      .then(res => {
-        console.log(res)
-        setData(res.data)
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }, [])
-
-  // const renderData = () => {
-  //   return data.map(data => {
-  //     return (
-  //       <span><img src={data.avatar} alt="jjj" style={{ width: '100%' }} /></span>
-  //     )
-  //   })
-  // }
+const Index = ({ data}) => {
 
   return (
     <section className='section__padding'>

@@ -23,11 +23,12 @@ const Label = styled.label`
   color: #1B8BF8;
 `
 
-const InputContainer = ({ label, type, placeholder, name }) => {
+const InputContainer = ({ label, type, placeholder, name, value, onChange }) => {
+
   return (
     <Container>
       <Label>{label}</Label>
-      <Input type={type} placeholder={placeholder} name={name}></Input>
+      <Input type={type} placeholder={placeholder} name={name} value={value} onChange={onChange}></Input>
     </Container>
   )
 }
