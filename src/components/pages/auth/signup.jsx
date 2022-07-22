@@ -3,12 +3,14 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { InputForm, FullWidthButton, RemeberMe, SubText } from "../../index";
 import "./auth.css";
 
-const SignIn = ({ data }) => {
+const SignUp = ({ data }) => {
   let navigate = useNavigate()
   let location = useLocation()
   const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
     email: "",
-    password: "",
+    password: ""
   });
 
   const handleFormChange = (event) => {
@@ -33,11 +35,32 @@ const SignIn = ({ data }) => {
       <div className="container">
         <div className="container__form">
           <div className="container__form-text">
-            <h2>Welcome back</h2>
-            <p>Welcome back! Please enter your details.</p>
+            <p className='welcome-text'>start for free</p>
+            <h2>Craate new account</h2>
+            <span className="redirect-text">Already have an account? <i onClick={() => navigate(location.pathname = '/signin')}>SignIn</i></span>
           </div>
 
           <form onSubmit={handleSubmit}>
+            <div className='inline__input'>
+              <InputForm
+                label={`First Name`}
+                type={`text`}
+                name={`firstName`}
+                value={form.firstName}
+                onChange={handleFormChange}
+                placeholder={`First Name`}
+              />
+
+              <InputForm
+                label={`Last Name`}
+                type={`text`}
+                name={`lastName`}
+                value={form.lastName}
+                onChange={handleFormChange}
+                placeholder={`Last Name`}
+              />
+            </div>
+
             <InputForm
               label={`Email`}
               type={`email`}
@@ -56,23 +79,17 @@ const SignIn = ({ data }) => {
               placeholder={`Enter password`}
             />
 
-            <RemeberMe />
             <FullWidthButton
               type="submit"
-              label={`Sign in`}
+              label={`Sign up`}
               disabled={!form.email && !form.password}
               onClick={showDataForm}
             />
 
-            <SubText
-              text={`Don't have an account?`}
-              linkText={`Sign up for free`}
-              onClick={() => navigate(location.pathname = '/signup')}
-            />
           </form>
         </div>
         <div className="container__right">
-          {data.slice(6, 7).map((x) => (
+          {data.slice(11, 12).map((x) => (
             <img key={x.id} src={x.avatar} alt={x.name} />
           ))}
         </div>
@@ -81,4 +98,4 @@ const SignIn = ({ data }) => {
   );
 };
 
-export default SignIn;
+export default SignUp;

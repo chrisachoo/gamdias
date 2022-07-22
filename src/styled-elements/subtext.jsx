@@ -13,7 +13,7 @@ const SPAN = styled.span`
 `
 
 const SubText = ({text, linkText, onClick}) => {
-  return <P>{text} <SPAN onClick={onClick}>{linkText}</SPAN></P>
+  return <P className='redirect-text'>{text} <SPAN onClick={onClick}>{linkText}</SPAN></P>
 }
 
 export default SubText

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
-import { Home, PageNotFound, Games, Signin } from './components/pages'
+import { Home, PageNotFound, Games, SignIn, SignUp } from './components/pages'
 import { Navbar } from './components'
 
 function App() {
@@ -22,18 +22,20 @@ function App() {
       })
   }, [])
 
-
   return (
     <div className="App">
-      {location.pathname !== '/signin' && <Navbar />}
-      <Routes>
-        <Route path='/' element={<Home data={data}/>} />
+
+      {
+        location.pathname !== '/signin' && location.pathname !== '/signup' && <Navbar />
+      }
+      <Routes element={<Navbar />}>
+        <Route path='/' element={<Home data={data} />} />
         <Route path='/game' element={<Games data={data} />} />
-        <Route path='/signin' element={<Signin data={data} />} />
+        <Route path='/signin' element={<SignIn data={data} />} />
+        <Route path='/signup' element={<SignUp data={data} />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
 
-      
     </div>
   )
 }

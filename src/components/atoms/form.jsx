@@ -6,7 +6,7 @@ const Container = styled.div`
 `
 
 const Label = styled.label`
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 400;
     margin-bottom: 4px;
 `
@@ -19,11 +19,11 @@ const Input = styled.input`
     margin-bottom: 1em;
 `
 
-const Form = ({label, type, placeholder, name, value, onChange }) => {
+const Form = ({label, type, placeholder, name, value, onChange, required }) => {
   return (
     <Container>
         <Label>{label}</Label>
-        <Input type={type} placeholder={placeholder} name={name} value={value} onChange={onChange}></Input>
+        <Input className='invalid' type={type} placeholder={placeholder} name={name} value={value} onChange={onChange} ></Input>
     </Container>
   )
 }
