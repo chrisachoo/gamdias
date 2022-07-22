@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import './App.css'
-import { Home, PageNotFound, Games, SignIn, SignUp } from './components/pages'
+import { Home, PageNotFound, Games, SignIn, SignUp, GameDetails } from './components/pages'
 import { Navbar } from './components'
 
 function App() {
@@ -33,6 +33,7 @@ function App() {
         <Route path='/game' element={<Games data={data} />} />
         <Route path='/signin' element={<SignIn data={data} />} />
         <Route path='/signup' element={<SignUp data={data} />} />
+        <Route path='/detail' element={<GameDetails data={data} />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
 
