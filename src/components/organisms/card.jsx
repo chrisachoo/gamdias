@@ -25,9 +25,9 @@ const Text = styled.p `
   bottom: 0;
   font-size: 14px;
 `
-const Card = ({ url, gameName }) => {
+const Card = ({ url, gameName, onClick }) => {
   return (
-    <CardComponent>
+    <CardComponent onClick={onClick}>
       <Image src={url} alt="game-pic" />
       <Inside>
         <Text>{gameName}</Text>

@@ -30,6 +30,16 @@ function App() {
         <Input type={`text`} name={`lastName`} value={form.lastName} placeholder={`lastName`} onChange={handleFormChange} />
         <Input type={`email`} name={`mail`} value={form.mail} placeholder={`mail`} onChange={handleFormChange} />
         <button type='submit'>submit</button>
+
+        {data.slice(9, 18).map((x, key) => (
+          <Card
+            className='section__cards-list'
+            key={x.id}
+            url={x.avatar}
+            gameName={x.name}
+            onClick={event => handleClick(event, key)}
+          />
+        ))}
       </form>
     </div>
   )
