@@ -1,7 +1,16 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import './detail.css'
 
 const GameDetails = ({ data }) => {
+
+  const location = useLocation()
+  let id = location.pathname.substring(6) - 1
+  const currentData = data[id]
+  // console.log('name: ', currentData.name)
+
+
+
   return (
     <div className='section__padding'>
       <div className='game__detail'>
@@ -11,18 +20,7 @@ const GameDetails = ({ data }) => {
           ))}
         </div>
         <div className='game__detail-information'>
-          {data.slice(11, 12).map(x => (
-            <>
-              <h2>game title: {x.name}</h2>
-              <p>game genre: {x.genre}</p>
-              <p>release: {x.releaseDate}date</p>
-              <p>rating: {x.rating}</p>
-              <p>bublisher: {x.publishe}</p>
-              <p>developer: {x.developer}</p>
-              <p>description: {x.description}</p>
-            </>
-
-          ))}
+            <p>{currentData.object.name}</p>
         </div>
       </div>
     </div>

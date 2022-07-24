@@ -25,7 +25,7 @@ const Index = ({ data}) => {
         ))}
       </div>
       <div className='section__games'>
-        <Link to='./game'>
+        <Link to='./game' onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}>
           <p>click here for more</p>
           <span><HiChevronDown /></span>
         </Link>

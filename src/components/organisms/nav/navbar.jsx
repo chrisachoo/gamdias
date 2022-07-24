@@ -8,6 +8,10 @@ const Navbar = () => {
 
   const [toggle, setToggle] = useState(false)
 
+  const changeState = (state) => {
+    setToggleMenu(state)
+  }
+
   let navigate = useNavigate()
   const toSignin = () => {
     navigate('signin')
@@ -23,9 +27,9 @@ const Navbar = () => {
         {toggle && (
           <div className='navbar__menu-links'>
             <div className='navbar__menu-links__container'>
-              <li><Link to='/game'>Games</Link></li>
-              <li><Link to='/shop'>Shop</Link></li>
-              <li><Link to='/forum'>Forum</Link></li>
+              <li><Link to='/game' onClick={() => setToggle(false)}>Games</Link></li>
+              <li><Link to='/shop' onClick={() => setToggle(false)}>Shop</Link></li>
+              <li><Link to='/forum' onClick={() => setToggle(false)}>Forum</Link></li>
             </div>
           </div>
         )}
@@ -44,7 +48,7 @@ const Navbar = () => {
         <PrimaryButton label={`Signin`} onClick={() => toSignin()} />
       </div>
       <div className='navbar__profile'>
-          <RiUser3Fill color='#152632' size={20} onClick={() => toSignin()}/>
+        <RiUser3Fill color='#152632' size={20} onClick={() => toSignin()} />
       </div>
     </div>
   )

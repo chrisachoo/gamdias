@@ -22,18 +22,22 @@ function App() {
       })
   }, [])
 
+  const handleClickOutside = () => {
+    console.log('onClickOutside() method called')
+  }
+
   return (
     <div className="App">
 
       {
         location.pathname !== '/signin' && location.pathname !== '/signup' && <Navbar />
       }
-      <Routes element={<Navbar />}>
+      <Routes>
         <Route path='/' element={<Home data={data} />} />
         <Route path='/game' element={<Games data={data} />} />
         <Route path='/signin' element={<SignIn data={data} />} />
         <Route path='/signup' element={<SignUp data={data} />} />
-        <Route path='/detail' element={<GameDetails data={data} />} />
+        <Route path='game/:id' element={<GameDetails data={data} />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
 
