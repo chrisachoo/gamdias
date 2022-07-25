@@ -2,3 +2,58 @@
     display: grid;
 }
 
+.game__detail-image {
+    margin-bottom: 1em;
+}
+
+.name {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.description {
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+.release {
+    margin: 8px 0;
+    font-weight: 600;
+}
+
+.get-game {
+    margin: 1em 0;
+}
+
+.inline__content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.inline__content-name p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.inline__content-icon p {
+    font-size: 25px;
+}
+
+@media only screen and (min-width: 992px) {
+    .game__detail {
+        grid-template-columns: 60% auto;
+    }
+
+    .game__detail-image {
+        margin-bottom: unset;
+        margin-right: 2em;
+    }
+
+    .game__detail-information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
