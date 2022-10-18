@@ -1,18 +1,22 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import GlobalStyles from './styled-elements/global.styles'
 import React, { useState, useEffect, Suspense, lazy } from 'react'
 import {
   Navbar,
   CubeSpinner
 } from './components'
+import { ErrorBoundary } from 'react-error-boundary'
 const Index = lazy(() => import('./components/pages/index.home'))
 const Listings = lazy(() => import('./components/pages/listing.games'))
 const DetailInfo = lazy(() => import('./components/pages/detail.page.jsx'))
 const Signin = lazy(() => import('./components/pages/signin.auth'))
+const ErrorFallback = lazy(() => import('./test/error.fallback'))
+
 
 function App() {
 
   const location = useLocation()
+  const navigate = useNavigate()
   const [data, setData] = useState([])
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -53,14 +57,25 @@ function App() {
           {
             location.pathname !== '/signin' && <Navbar />
           }
-          <Suspense fallback={<span>Loading...</span>}>
-            <Routes>
-              <Route path='/' element={<Index data={data} />} />
-              <Route path='/games' element={<Listings data={data} />} />
-              <Route path='/detail-info' element={<DetailInfo />} />
-              <Route path='/signin' element={<Signin />} />
-            </Routes>
-          </Suspense>
+          <ErrorBoundary FallbackComponent={ErrorFallback}
+            onReset={() => {
+              if (error) {
+                console.error({ error })
+                window.location.reload()
+              } else {
+                navigate('/')
+              }
+            }}
+          >
+            <Suspense fallback={<span>Loading...</span>}>
+              <Routes>
+                <Route path='/' element={<Index data={data} />} />
+                <Route path='/games' element={<Listings data={data} />} />
+                <Route path='/detail-info' element={<DetailInfo />} />
+                <Route path='/signin' element={<Signin />} />
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
         </div>
       )
       }
