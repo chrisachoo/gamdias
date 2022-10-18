@@ -6,6 +6,7 @@ import { IoIosArrowDown } from 'react-icons/io'
 
 export const SectionContainer = styled(SectionWrapp)`
   background: ${props => props.theme.colors.SpaceCadet};
+  min-height: 90vh;
   
   ${SectionWrapp}
 `

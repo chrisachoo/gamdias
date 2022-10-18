@@ -8,7 +8,7 @@ import {
 const Card = ({onClick, src, alt, title}) => {
   return (
     <Container onClick={onClick}>
-      <CardFlap src={src} alt={alt}/>
+      <CardFlap src={src} alt={alt} loading='lazy'/>
       <Overlay>
         <OverlayText>{title}</OverlayText>
       </Overlay>

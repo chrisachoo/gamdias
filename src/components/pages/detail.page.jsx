@@ -27,7 +27,7 @@ const PageDetail = () => {
       <ContainerContent>
         {/* <GameImage src={state.avatar} alt={state.name}/> */}
         <IframeWrapper>
-          <GameTrailer src={state.trailer} allowFullScreen />
+          <GameTrailer src={state.trailer} loading='lazy' allowFullScreen />
         </IframeWrapper>
         <GameDetail>
           <GameName>{state.name}</GameName>

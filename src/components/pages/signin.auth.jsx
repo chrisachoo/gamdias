@@ -1,18 +1,24 @@
 import {
-  ContainerFluid,
-  AnimationContainer,
-  FormContainer,
-  Form
-} from '../../styled-elements/user.elements'
+  SectionWrapp,
+  SectionRow,
+  SectionColumn,
+  ContentWrapper
+} from '../../styled-elements/section.elements'
+import { Container } from '../../styled-elements/global.styles'
 
 const Login = () => {
   return (
-    <ContainerFluid>
-      {/* <AnimationContainer>jjj</AnimationContainer> */}
-      <FormContainer>
-        
-      </FormContainer>
-    </ContainerFluid>
+    <SectionWrapp>
+      <Container>
+        <SectionRow>
+          <SectionColumn>
+            <ContentWrapper>
+
+            </ContentWrapper>
+          </SectionColumn>
+        </SectionRow>
+      </Container>
+    </SectionWrapp>
   )
 }
 

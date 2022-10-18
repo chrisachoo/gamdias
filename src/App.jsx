@@ -1,13 +1,14 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import GlobalStyles from './styled-elements/global.styles'
+import React, { useState, useEffect, Suspense, lazy } from 'react'
 import {
   Navbar,
-  CubeSpinner,
-  Index,
-  DetailInfo,
-  Signin
+  CubeSpinner
 } from './components'
-import React, { useState, useEffect } from 'react'
+const Index = lazy(() => import('./components/pages/index.home'))
+const Listings = lazy(() => import('./components/pages/listing.games'))
+const DetailInfo = lazy(() => import('./components/pages/detail.page.jsx'))
+const Signin = lazy(() => import('./components/pages/signin.auth'))
 
 function App() {
 
@@ -52,13 +53,17 @@ function App() {
           {
             location.pathname !== '/signin' && <Navbar />
           }
-          <Routes>
-            <Route path='/' element={<Index data={data} />} />
-            <Route path='/detail-info' element={<DetailInfo />} />
-            <Route path='/signin' element={<Signin />} />
-          </Routes>
+          <Suspense fallback={<span>Loading...</span>}>
+            <Routes>
+              <Route path='/' element={<Index data={data} />} />
+              <Route path='/games' element={<Listings data={data} />} />
+              <Route path='/detail-info' element={<DetailInfo />} />
+              <Route path='/signin' element={<Signin />} />
+            </Routes>
+          </Suspense>
         </div>
-      )}
+      )
+      }
     </>
   )
 }

@@ -54,3 +54,14 @@ export const InnerCubeTwo = styled(Cube)`
 
   ${Cube}
 `
+
+// SKELETON LOADING
+
+export const CardWrapp = styled.div`
+  height: 200px;
+  width: 500px;
+  background: ${props => props.theme.colors.Ivory};
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+`
