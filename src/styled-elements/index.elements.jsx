@@ -6,7 +6,9 @@ import { IoIosArrowDown } from 'react-icons/io'
 
 export const SectionContainer = styled(SectionWrapp)`
   background: ${props => props.theme.colors.SpaceCadet};
-  min-height: 90vh;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
   
   ${SectionWrapp}
 `
@@ -102,7 +104,7 @@ export const ContainerCards = styled(Container)`
   }
 `
 
-export const RouterLinkText = styled(Link)`
+export const RouterLinkText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,4 +119,11 @@ export const LinkText = styled.span`
 
 export const ArrowIcon = styled(IoIosArrowDown)`
   color: ${props => props.theme.colors.LavenderBlue};
+`
+
+export const PaginateContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2em;
 `

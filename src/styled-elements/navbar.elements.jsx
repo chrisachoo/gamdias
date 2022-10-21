@@ -23,7 +23,7 @@ export const NavbarContainer = styled(Container)`
   ${Container}
 `
 
-export const NavLogo = styled(Link)`
+export const NavLogo = styled.div`
   color: ${props => props.theme.colors.Ivory};
   justify-self: flex-start;
   cursor: pointer;

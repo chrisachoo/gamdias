@@ -67,7 +67,7 @@ function App() {
               }
             }}
           >
-            <Suspense fallback={<span>Loading...</span>}>
+            <Suspense fallback={<CubeSpinner/>}>
               <Routes>
                 <Route path='/' element={<Index data={data} />} />
                 <Route path='/games' element={<Listings data={data} />} />

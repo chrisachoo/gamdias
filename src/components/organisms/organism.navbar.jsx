@@ -14,9 +14,12 @@ import {
 } from '../../styled-elements/navbar.elements'
 import { Button } from '../../styled-elements/global.styles'
 import { FaTimes, FaBars } from 'react-icons/fa'
+import { animateScroll as scroll } from 'react-scroll'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
 
+  const navigate = useNavigate()
   const [click, setClick] = useState(false)
   const [button, setButton] = useState(true)
 
@@ -29,6 +32,12 @@ const Navbar = () => {
     }
   }
 
+  const toggleHome = async () => {
+    scroll.scrollToTop()
+    setClick(false)
+    navigate('/')
+  }
+
   useEffect(() => {
     showButton()
   },[])
@@ -39,7 +48,7 @@ const Navbar = () => {
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav>
         <NavbarContainer>
-          <NavLogo to='/'>
+          <NavLogo onClick={toggleHome}>
             <NavIcon />
             GAMDIAS
           </NavLogo>

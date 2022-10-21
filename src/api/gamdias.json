@@ -71,7 +71,7 @@
     "rating": "16V",
     "publisher": "PlayStation PC LLC",
     "developer": "Bend Studio",
-    "avatar": "https://wallpaperaccess.com/full/1298451.jpg",
+    "avatar": "https://wallpapercave.com/wp/wp9271935.jpg",
     "description": "Ride and fight into a deadly, post pandemic America. Play as Deacon St. John, a drifter and bounty hunter who rides the broken road, fighting to survive while searching for a reason to live in this open-world action-adventure game.",
     "id": "5",
     "trailer": "https://www.youtube.com/embed/p9XlSvnRk3E"
@@ -121,7 +121,7 @@
     "rating": "13LV",
     "publisher": "Electronic Arts",
     "developer": "Ghost Games",
-    "avatar": "https://wallpaperaccess.com/full/1952698.jpg",
+    "avatar": "https://wallpapercave.com/wp/wp5008532.jpg",
     "description": "Hustle by day and risk it all at night in Need for Speed™ Heat Deluxe Edition, a white-knuckle street racer, where the lines of the law fade as the sun starts to set.",
     "id": "8",
     "trailer": "https://www.youtube.com/embed/9ewiJJe_nYI"
@@ -399,5 +399,20 @@
     "description": "Death Awaits. Agent 47 returns in HITMAN 3, the dramatic conclusion to the World of Assassination trilogy.",
     "id": "26",
     "trailer": "https://www.youtube.com/embed/Z29ORu6_p34"
+  },
+  {
+    "name": "Call of Duty®: Black Ops III",
+    "releaseDate": "November 06, 2015",
+    "genre": [
+      "Adventure",
+      "Action"
+    ],
+    "rating": "PEGI 18",
+    "publisher": "Treyarch, Aspyr (Mac)",
+    "developer": "Activision, Aspyr (Mac)",
+    "avatar": "https://wallpapercave.com/dwp2x/wp1917958.jpg",
+    "description": "Call of Duty®: Black Ops III Zombies Chronicles Edition includes the full base game plus the Zombies Chronicles content expansion.",
+    "id": "27",
+    "trailer": "https://www.youtube.com/embed/qAUYNIDEJ6o"
   }
 ]

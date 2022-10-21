@@ -16,8 +16,8 @@ import {
   LinkText,
   ArrowIcon
 } from '../../styled-elements/index.elements'
-import { Card } from '../'
-import { useState } from 'react'
+import { Card, Skelleton } from '../'
+import { animateScroll as scroll } from 'react-scroll'
 
 const Index = ({ data }) => {
 
@@ -25,6 +25,11 @@ const Index = ({ data }) => {
   const two = Math.floor(Math.random() * (data.length - 1) + 1)
   const three = Math.floor(Math.random() * (data.length - 1) + 1)
   const navigate = useNavigate()
+  
+  const toggleGames = () => {
+    scroll.scrollToTop()
+    navigate('/games')
+  }
 
   return (
     <SectionContainer>
@@ -70,7 +75,7 @@ const Index = ({ data }) => {
         />
       </ContainerCards>
       <FooterText>
-        <RouterLinkText to='/games'>
+        <RouterLinkText onClick={toggleGames}>
           <LinkText>click here for more</LinkText>
           <ArrowIcon />
         </RouterLinkText>

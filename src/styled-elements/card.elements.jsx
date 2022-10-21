@@ -48,8 +48,8 @@ export const OverlayText = styled.h4`
 
 export const CardFlap = styled.img`
   width: 100%;
-  max-height: 180px;
+  /* max-height: 180px; */
   border-radius: 8px;
-  object-fit: cover;
+  object-fit: fit;
   overflow: hidden;
 `
