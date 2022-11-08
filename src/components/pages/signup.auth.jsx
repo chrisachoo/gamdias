@@ -19,12 +19,12 @@ import {
   TermParagraph,
   SpanLink
 } from '../../styled-elements/user.elements'
-import { useSignin } from '../hooks/useSignin'
+import { useSignup } from '../hooks/useSignup'
 import { FcGoogle } from 'react-icons/fc'
 import { useState } from 'react'
 
-const Login = () => {
-  const { signin, error, isLoading } = useSignin()
+const Signup = () => {
+  const { signup, error, isLoading } = useSignup()
   const [form, setForm] = useState({
     email: '',
     password: ''
@@ -40,21 +40,18 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault()
     let { email, password } = form
-    console.log({form})
-    await signin(email, password)
+    console.log({ form })
+    await signup(email, password)
   }
 
   return (
     <ContainerFluid>
-      <ImageWrapper>
-        <Image src='https://wallpaperaccess.com/full/1895228.jpg' alt='CODMW' />
-      </ImageWrapper>
       <FormContainer>
-      {error && <ErrorMessage>{error}</ErrorMessage>}
+        {error && <ErrorMessage>{error}</ErrorMessage>}
         <TextWrapp>
-          <TextDesc>REGISTRATION</TextDesc>
+          <TextDesc style={{ color: '#FBFFF1' }}>REGISTRATION</TextDesc>
           <Devider>/</Devider>
-          <TextDesc style={{color: '#FBFFF1'}}>LOGIN</TextDesc>
+          <TextDesc>LOGIN</TextDesc>
         </TextWrapp>
         <Form onSubmit={handleSubmit}>
           <InputContainer>
@@ -84,7 +81,7 @@ const Login = () => {
             primary
           >
             <AnimateIcon loading={isLoading} />
-            Login
+            Signup
           </IconButton>
         </Form>
         {/* <ButtonDevider>
@@ -96,15 +93,18 @@ const Login = () => {
         </ButtonDevider> */}
         {/* <IconButton>
           <FcGoogle />
-          Login with Google
+          Signup with Google
         </IconButton> */}
         <TermParagraph style={{marginTop: '2em'}}>
-          Don't have an account? {' '}
-          <SpanLink to='/signup'>Signup Here</SpanLink>
+          Have an account? {' '}
+          <SpanLink to='/login'>Login</SpanLink>
         </TermParagraph>
       </FormContainer>
+      <ImageWrapper>
+        <Image src='https://wallpaperaccess.com/full/682082.jpg' alt='watchdogs2' />
+      </ImageWrapper>
     </ContainerFluid>
   )
 }
 
-export default Login
+export default Signup

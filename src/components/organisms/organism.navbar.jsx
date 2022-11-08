@@ -15,6 +15,8 @@ import {
 import { Button } from '../../styled-elements/global.styles'
 import { FaTimes, FaBars } from 'react-icons/fa'
 import { animateScroll as scroll } from 'react-scroll'
+import { useAuthContext } from '../hooks/useAuthContext'
+import { useSignout } from '../hooks/useSignout'
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
@@ -22,10 +24,13 @@ const Navbar = () => {
   const navigate = useNavigate()
   const [click, setClick] = useState(false)
   const [button, setButton] = useState(true)
+  const { user } = useAuthContext()
+  const {signout} = useSignout()
 
   const handleClick = () => setClick(!click)
+  const handleSignout = () => signout()
   const showButton = () => {
-    if(window.innerWidth <=960) {
+    if (window.innerWidth <= 960) {
       setButton(false)
     } else {
       setButton(true)
@@ -40,7 +45,7 @@ const Navbar = () => {
 
   useEffect(() => {
     showButton()
-  },[])
+  }, [])
 
   window.addEventListener('resize', showButton)
 
@@ -67,13 +72,21 @@ const Navbar = () => {
             </NavItem>
             <NavItemBtn>
               {button ? (
-                <NavBtnLink to='/signin'>
-                  <Button primary>SIGN IN</Button>
-                </NavBtnLink>
+
+                user ? (<NavBtnLink>
+                  <Button primary onClick={handleSignout}>LOGOUT</Button>
+                </NavBtnLink>) : (<NavBtnLink to='/login'>
+                  <Button primary>LOGIN</Button>
+                </NavBtnLink>)
+
               ) : (
-                <NavBtnLink to='/signup'>
-                  <Button fontBig primary>SIGN UP</Button>
-                </NavBtnLink>
+
+                user ? (<NavBtnLink>
+                  <Button fontBig primary onClick={handleSignout}>LOGOUT</Button>
+                </NavBtnLink>) : (<NavBtnLink to='/login'>
+                  <Button fontBig primary>LOGIN</Button>
+                </NavBtnLink>)
+
               )}
             </NavItemBtn>
           </NavMenu>
