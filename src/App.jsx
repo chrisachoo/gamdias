@@ -72,7 +72,7 @@ function App() {
                 <Route path='/' element={<Index data={data} />} />
                 <Route path='/games' element={<Listings data={data} />} />
                 <Route path='/detail-info' element={<DetailInfo />} />
-                <Route path='/signin' element={<Signin />} />
+                <Route path='/signin' element={<Signin data={data}/>} />
               </Routes>
             </Suspense>
           </ErrorBoundary>

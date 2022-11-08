@@ -111,6 +111,7 @@ export const RouterLinkText = styled.div`
   justify-content: center;
   text-decoration: none;
   margin-top: 2em;
+  cursor: pointer;
 `
 export const LinkText = styled.span`
   font-style: normal;
