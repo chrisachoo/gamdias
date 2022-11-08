@@ -16,12 +16,23 @@ import {
 } from '../../styled-elements/elements.elements'
 import { Button } from '../../styled-elements/global.styles'
 import { FaWindows, FaPlaystation, FaXbox } from 'react-icons/fa'
-import { useLocation } from 'react-router-dom'
+import { useAuthContext } from '../hooks/useAuthContext'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const PageDetail = () => {
 
   const { state } = useLocation()
-  console.log(state)
+  const { user } = useAuthContext()
+  const navigate = useNavigate()
+  const authenticate = () => {
+    if (user) {
+      console.log('authenticated!')
+    } 
+    else {
+      navigate('/login')
+    }
+  }
+
   return (
     <SectionContainer>
       <ContainerContent>
@@ -34,7 +45,7 @@ const PageDetail = () => {
           <GameDescription>{state.description}</GameDescription>
           <GameRelease>{state.releaseDate}</GameRelease>
           <ButtonWrapp>
-            <Button primary>Get Game</Button>
+            <Button primary onClick={authenticate}>Get Game</Button>
           </ButtonWrapp>
           <GamePlartform>
             <PlartformText>Plartform: </PlartformText>

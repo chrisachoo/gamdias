@@ -8,17 +8,18 @@ export const useSignup = () => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(null)
   const { dispatch } = useAuthContext()
-  const _url = 'https://gamdias-node-serve.herokuapp.com'
+  // const _url = 'https://gamdias-node-serve.herokuapp.com'
+  const _url = 'http://localhost:8080'
 
-  const signup = async (firstName, lastName, email, password) => {
+  const signup = async (email, password) => {
     setIsLoading(true)
     setError(null)
 
     const response = await fetch(`${_url}/api/user/signup`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ firstName, lastName, email, password })
-    }).catch((err)=> {
+      body: JSON.stringify({ email, password })
+    }).catch((err) => {
       console.log(err)
     })
     const json = await response.json()
@@ -30,7 +31,7 @@ export const useSignup = () => {
 
     if (response.ok) {
       localStorage.setItem('user', JSON.stringify(json))
-      dispatch({type: 'SIGNIN', payload: json})
+      dispatch({ type: 'SIGNIN', payload: json })
       setIsLoading(false)
       navigate('/')
     }

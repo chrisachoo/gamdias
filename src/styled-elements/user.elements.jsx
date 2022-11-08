@@ -42,11 +42,6 @@ export const TextDesc = styled(Link)`
   font-weight: 500;
   text-decoration: none;
   color: ${props => props.theme.colors.MaximumBluePurple};
-
-  &.active {
-    /* color: ${props => props.theme.colors.Ivory}; */
-    color: red;
-  }
 `
 export const Devider = styled.div`
   color: ${props => props.theme.colors.MaximumBluePurple};
@@ -117,6 +112,7 @@ export const TermParagraph = styled.p`
   letter-spacing: 1px;
   margin-block-start: 0;
   margin-block-end: 0;
+  text-align: center;
 `
 export const SpanLink = styled(Link)`
   color: ${props => props.theme.colors.MaximumBluePurple};
@@ -132,7 +128,7 @@ export const IconButton = styled.button`
   justify-content: center;
   gap: 8px;
   border-radius: 5px;
-  background: ${({ primary }) => (primary ? '#EC368D' : '#FBFFF1')};
+  background: ${({ primary }) => (primary ? '#5E2BFF' : '#FBFFF1')};
   color: ${({ primary }) => (primary ? '#FBFFF1' : '#22223B')};
   white-space: nowrap;
   padding: 10px 20px;
@@ -144,7 +140,7 @@ export const IconButton = styled.button`
 
   &:hover {
     transition: all .3s ease-out;
-    background: ${({ primary }) => (primary ? '#89AAE6' : '#D0D0F6')};
+    background: ${({ primary }) => (primary ? '#EC368D' : '#D0D0F6')};
     color: ${({ primary }) => (primary ? '#FBFFF1' : '#22223B')};
   }
 `
