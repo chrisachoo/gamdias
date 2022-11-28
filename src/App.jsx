@@ -55,9 +55,6 @@ function App() {
       {isLoading && (<CubeSpinner />)}
       {!isLoading && (
         <div>
-          {
-            location.pathname !== '/login' && location.pathname !== '/signup' && <Navbar />
-          }
           <ErrorBoundary FallbackComponent={ErrorFallback}
             onReset={() => {
               if (error) {
@@ -69,6 +66,9 @@ function App() {
             }}
           >
             <Suspense fallback={<CubeSpinner />}>
+              {
+                location.pathname !== '/login' && location.pathname !== '/signup' && <Navbar />
+              }
               <Routes>
                 <Route path='/' element={<Index data={data} />} />
                 <Route path='/games' element={<Listings data={data} />} />

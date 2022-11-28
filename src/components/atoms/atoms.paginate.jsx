@@ -9,11 +9,11 @@ const Paginate = ({ page, games, paginate, currentPage, previousPage, nextPage, 
 
   return (
     <div className='pagination-container' >
-      <ul className='pagination'>
+      <ul className='pagination' style={{float: 'right'}}>
         <li onClick={previousPage} className='page-number'>
           Prev
         </li>
-        {pageNumber.map((number) => (
+        {/* {pageNumber.map((number) => (
           <li
             key={number}
             onClick={() => paginate(number)}
@@ -23,7 +23,7 @@ const Paginate = ({ page, games, paginate, currentPage, previousPage, nextPage, 
           >
             {number}
           </li>
-        ))}
+        ))} */}
         <li onClick={nextPage} className='page-number'>
           Next
         </li>

@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { FaSearch, FaMicrophone } from 'react-icons/fa'
 
 export const SearchContainer = styled.div`
   display: flex;
@@ -62,15 +63,6 @@ export const PlartformText = styled.p`
   font-weight: 600;
   color: ${props => props.theme.colors.Ivory};
 `
-// export const GameTrailer = styled.iframe`
-//   width: 100%;
-//   height: 350px;
-
-//   @media screen and (max-width: 991px) {
-//     height: fit-content;
-//     width: 100%;
-//   }
-// `
 
 export const IframeWrapper = styled.div`
   position: relative;
@@ -87,4 +79,39 @@ export const GameTrailer = styled.iframe`
   right: 0;
   width: 100%;
   height: 100%;
+`
+export const SearchFilterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+`
+export const SearchFilter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  padding: 5px 10px;
+  gap: 5px;
+  width: 40%;
+  color: ${props => props.theme.colors.SpaceCadet};
+  background: ${props => props.theme.colors.Ivory};
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+  @media screen and (max-width: 768px){
+    width: unset;
+  }
+`
+export const Search = styled.input`
+  border: none;
+  outline: none;
+  padding: 2px 10px;
+  width: 100%;
+  font-weight: 500;
+`
+export const SearchIcon = styled(FaSearch)`
+  cursor: pointer;
+`
+export const MicrophoneIcon = styled(FaMicrophone)`
+  cursor: pointer;
 `

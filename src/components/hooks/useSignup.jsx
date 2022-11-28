@@ -8,8 +8,8 @@ export const useSignup = () => {
   const [error, setError] = useState(null)
   const [isLoading, setIsLoading] = useState(null)
   const { dispatch } = useAuthContext()
-  // const _url = 'https://gamdias-node-serve.herokuapp.com'
-  const _url = 'http://localhost:8080'
+  const _url = 'https://gamdias-node-serve.herokuapp.com'
+  // const _url = 'http://localhost:8080'
 
   const signup = async (email, password) => {
     setIsLoading(true)

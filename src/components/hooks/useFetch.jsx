@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect } from 'react'
 
 const useFetch = (query, page) => {
-  const [isLoading, setIsLoading] = useStat(true)
-  const [error, setError] = useStat(false)
-  const [list, setList] = useStat([])
+  const [isLoading, setIsLoading] = useState(true)
+  const [error, setError] = useState(false)
+  const [list, setList] = useState([])
   const _url = 'https://62c2c416876c4700f52db5b6.mockapi.io/api/v1/'
 
   const sendQuery = useCallback(async () => {
